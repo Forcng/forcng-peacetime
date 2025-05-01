@@ -4,10 +4,17 @@ RegisterNetEvent('forcng:client:peaceTime')
 AddEventHandler('forcng:client:peaceTime', function(isActive)
     isPeaceTime = isActive
 
-    SendNUIMessage({
-        action = 'isPeaceTimeOn',
-        status = isActive
-    })
+    if isActive then
+        SendNUIMessage({
+            action = 'isPeaceTimeOn',
+            status = true
+        })
+    else
+        SendNUIMessage({
+            action = 'isPeaceTimeOn',
+            status = false
+        })
+    end
 end)
 
 -- Stops Players From Being Able To Aim, Punch
