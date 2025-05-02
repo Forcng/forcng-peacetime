@@ -21,7 +21,6 @@ end)
 CreateThread(function()
     while true do
         Wait(0)
-
         if isPeaceTime then
             DisableControlAction(0, 24, true)
             DisableControlAction(0, 25, true)
