@@ -28,7 +28,11 @@ CreateThread(function()
             DisableControlAction(0, 142, true)
             DisableControlAction(0, 257, true)
             DisablePlayerFiring(PlayerId(), true)
+            local playerPed = PlayerPedId()
+            local currentWeapon = GetSelectedPedWeapon(playerPed)
+            if currentWeapon ~= `WEAPON_UNARMED` then
+                TriggerEvent('ox_inventory:disarm')
+            end
         end
     end
 end)
-
