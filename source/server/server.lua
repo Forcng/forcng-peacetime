@@ -41,7 +41,7 @@ RegisterCommand('peacetime', function(source, args, rawCommand)
     end
 end)
 
--- Don't Remove, This Will Sync The Peace Time Status To All Players When They Join
+-- Don't Remove, This Will Sync The Peace Time Status To The Player When They Join
 AddEventHandler('esx:playerLoaded', function(playerId)
     TriggerClientEvent('forcng:client:peaceTime', playerId, isPeaceTime)
 end)
