@@ -6,7 +6,7 @@ RegisterCommand('peacetime', function(source, args, rawCommand)
     local xPlayer = ESX.GetPlayerFromId(source)
     if not xPlayer then return end
 
-    if xPlayer.getGroup() == 'director' or xPlayer.getGroup() == 'AddMinimapOverlay' then
+    if xPlayer.getGroup() == 'director' or xPlayer.getGroup() == 'admin' then
         isPeaceTime = not isPeaceTime
 
         TriggerClientEvent('forcng:client:peaceTime', -1, isPeaceTime)
